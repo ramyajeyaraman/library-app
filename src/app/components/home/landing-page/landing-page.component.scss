@@ -1,0 +1,144 @@
+@import '../../../../assets/styles/theme.scss';
+
+.management-librarian-section{
+    width: 70%;
+    margin-top: 11%;
+    height: 22%;
+    font-family:$primary-font;
+}
+.management-container{
+    @extend %align-center;
+    width: 100%;
+    height: 290px;
+    font-family: $primary-font;
+    margin-top:4%;
+}
+.management-container-librarian{
+    @extend %align-center;
+    width: 65%;
+    height: 290px;
+    font-family: $primary-font;
+    margin-top:4%;
+}
+.librarian-content-container{
+    height: 100%;
+    width: 190px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: $primary-color;
+    @extend %align-center;
+    font-size: $count-font;
+    font-weight: bold;
+}
+.admin-content-container{
+    height: 85%;
+    width: 260px;
+    background: $secondary-background;
+    justify-content: center;
+    font-size: $text-medium-font;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 2%;
+}
+.admin-content-graph-container{
+    height: 100%;
+    width: 260px;
+    justify-content: center;
+    font-size: $text-medium-font;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 2%;
+}
+.pie-chart-container{
+    height:100%;
+    width:100%;
+}
+.reports-admin-section{
+    height: 400px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.admin-section{
+    height:$screen-height;
+    background:$primary-background;
+}
+.reports-graph-container{
+    height: 330px;
+    width: 90%;
+    background: $secondary-background;
+}
+.reports-container{
+    @extend %align-center;
+}
+.manage-books-btn,.manage-students-btn,.manage-institution-btn{
+    background:$primary-color;
+}
+.books-tile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: #44e8bb;
+    @extend %align-center;
+}
+.students-tile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: #9be3ea;
+    @extend %align-center;
+}
+.students-tile-icon,.institutions-tile-icon,.books-tile-icon{
+    font-size: $tile-font;
+    color: $primary-font-color;
+    cursor:pointer;
+}
+.visits-tile-icon{
+    font-size: $tile-font;
+    color: $primary-font-color;
+}
+.institutions-tile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: #ec8d49;
+    @extend %align-center;
+}
+.visits-tile{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: #efe468;
+    @extend %align-center;
+}
+.count-style{
+    font-size: $count-font;
+    color: $primary-font-color;
+    font-family: $primary-font;
+}
+.manage-title{
+    padding-left: 5%;
+    position: relative;
+    top: 3%;
+    font-size: $text-label-font;
+    &.manage-librarian{
+        top:40px;
+    }
+}
+.genre-title{
+    padding-left:46.5%;
+    &.manage-librarian-genre{
+        padding-left: 33.5%;
+        width: 15%;
+    }
+}
+.graph-title{
+    padding-left:5%;
+    padding-bottom:3%;
+    font-size:$text-label-font;
+}
+.read-btn{
+    background:$primary-color;
+    color:$primary-font-color;
+}

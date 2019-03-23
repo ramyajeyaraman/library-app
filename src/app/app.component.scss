@@ -1,0 +1,55 @@
+@import '../assets/styles/theme.scss';
+
+
+.loading-image{
+    width: 5%;
+    height: 8%;
+}
+.spinner-container{
+    width: 100%;
+    height: 950px;
+    position: absolute;
+    top: 0;
+    background: $primary-icon-color;
+    z-index: 1000;
+    opacity: 0.8;
+}
+.app-title-left{
+    @extend %align-center;
+    font-size:$small-font;
+    cursor:pointer;
+}
+.app-title-right{
+    @extend %align-center;
+    font-size:$small-font;
+    color:$primary-font-color;
+}
+.blue-toolbar-background{
+    background:$primary-color;
+}
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+.app-icon{
+    color: $primary-icon-color;
+    font-size:$count-font;
+}
+.user-icon{
+    color: $primary-icon-color;
+    font-size:$count-font;
+    cursor:pointer;
+    padding:10px;
+}
+.app-title{
+    font-size: $text-label-font;
+    padding: 10px;
+    font-weight: bold;
+    font-family:$primary-font;
+    color:$primary-font-color;
+}
+.user-title{
+    font-size: $text-label-font;
+    padding: 10px;
+    font-weight: bold;
+    font-family:$primary-font;
+}

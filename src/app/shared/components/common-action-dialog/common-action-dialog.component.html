@@ -1,0 +1,67 @@
+<div class="dialog-style">
+    <div mat-dialog-title class="dialog-header" *ngIf="(userData.flow === 'edit-profile')">Edit Profile Details</div>
+    <div mat-dialog-title class="dialog-header small-dialog-header" *ngIf="(userData.flow === 'logout-profile')">Logout</div>
+    <mat-dialog-content>
+        <div class="dialog-details">
+            <div class="dialog-options" *ngIf="(userData.flow === 'edit-profile')">
+                <div class="dialog-label-container">
+                    <div class="dialog-input-field">
+                            <span class="dialog-label">Email Id: </span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span class="dialog-label">Password: </span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span class="dialog-label">Recovery Question 1: </span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span class="dialog-label">Recovery Question Answer 1: </span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span class="dialog-label">Recovery Question 2: </span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span class="dialog-label">Recovery Question Answer 2: </span>
+                    </div>
+                </div>
+                
+                <!-- Input-->
+                <div class="dialog-input-container">
+                    <div class="dialog-input-field">
+                        <span><input class="dialog-input" type="text" value="{{userData.email_id}}" [(ngModel)]="userData.email_id"/></span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span><input class="dialog-input" type="password" value="{{userData.password}}" [(ngModel)]="userData.password"/></span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <select class="dialog-input dialog-dropdown-input" value="{{userData.recovery_question1}}" [(ngModel)]="userData.recovery_question1">
+                            <option class="select-option-style" disabled>Choose Recovery Question 1</option>
+                            <option class="select-option-style" *ngFor="let option1 of optionsList1" value="{{option1}}">{{option1}}</option>
+                        </select>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span><input class="dialog-input" type="text" value="{{userData.recovery_answer1}}" [(ngModel)]="userData.recovery_answer1"/></span>
+                    </div>
+                    <div class="dialog-input-field">
+                        <select class="dialog-input dialog-dropdown-input" value="{{userData.recovery_question2}}" [(ngModel)]="userData.recovery_question2">
+                            <option class="select-option-style" disabled>Choose Recovery Question 2</option>
+                            <option class="select-option-style" *ngFor="let option2 of optionsList2" value="{{option2}}">{{option2}}</option>
+                        </select>
+                    </div>
+                    <div class="dialog-input-field">
+                        <span><input class="dialog-input" type="text" value="{{userData.recovery_answer2}}" [(ngModel)]="userData.recovery_answer2"/></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-logout-content" *ngIf="(userData.flow === 'logout-profile')">
+                {{userData.content}}
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="dialog-btn-container">
+        <button mat-raised-button (click)="cancel()">Cancel</button>
+        <button mat-raised-button *ngIf="(userData.flow === 'edit-profile')" class="dialog-btn"(click)="save()">Save</button>
+        <button mat-raised-button *ngIf="(userData.flow === 'logout-profile')" class="dialog-btn"(click)="save()">Logout</button>
+    </mat-dialog-actions>
+</div>
+

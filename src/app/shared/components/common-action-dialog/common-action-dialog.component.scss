@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/theme.scss';
+
+.dialog-input-field{
+    margin: 1% 10% 1% 10%;
+}
+.dialog-input{
+    margin-left: 5%;
+    padding: 10px;
+    width:85%;
+    border-radius: 6px;
+    border: 1px solid $input-background;
+    outline: none;
+    background:$input-background;
+    &.dialog-dropdown-input{
+        width:89.5%;
+    }
+}
+.dialog-label{
+    font-size: $text-medium-font;
+    font-weight: 500;
+    font-family: $primary-font;
+}
+.dialog-header{
+    margin-left: 2.5%;
+    font-size: $text-label-font;
+    &.small-dialog-header{
+        margin-left:10.5%;
+    }
+}
+.dialog-logout-content{
+    margin-left:10%;
+    font-size:$text-label-font;
+}
+.dialog-btn-container{
+    float: right;
+    margin-right: 11%;
+    margin-top: 2%;
+}
+.dialog-btn{
+    background:$primary-color;
+    color:$primary-font-color;
+}
+.dialog-label-container{
+    display: inline-block;
+    width: 30%;
+    line-height: 40px;
+    margin-top: 4%;
+}
+.dialog-input-container{
+    display:inline-block;
+    width:70%;
+}

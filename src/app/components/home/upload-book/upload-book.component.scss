@@ -1,0 +1,76 @@
+@import '../../../../assets/styles/theme.scss';
+
+
+.upload-section{
+    height:$screen-height;
+    background:$primary-background;
+}
+.upload-book-title{
+    margin: 5% 10% 5% 10%;
+    font-size: $text-label-font;
+    font-weight: bold;
+    font-family: $primary-font;
+    &.upload-flow-title{
+        margin: 5% 10% 5% 10%;
+    }
+}
+.upload-label{
+    font-size: $text-medium-font;
+    font-weight: 500;
+    font-family: $primary-font;
+}
+.book-details-upload{
+    width:100%;
+}
+.upload-input-field{
+    margin: 4% 10% 0% 0;
+}
+.upload-input{
+    margin-left: 5%;
+    padding: 10px;
+    width:80%;
+    border-radius: 6px;
+    border: 1px solid $input-background;
+    outline: none;
+    background:$input-background;
+}
+.upload-background{
+    height: 55%;
+    width: 80%;
+    margin-top: 36%;
+    border: 1px solid grey;
+    outline: none;
+    background: $primary-background;
+    border-radius: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-btn{
+    font-size: $text-medium-font;
+    background: $primary-color;
+    height: 45px;
+    width: 125px;
+    font-family: $primary-font;
+    color:$primary-font-color;
+}
+.upload-btn-field{
+    float: right;
+    margin-right: 15%;
+    &.register-btn{
+        margin-right:26%;
+        margin-top: 3%;
+    }
+}
+.upload-label-container{
+    display: inline-block;
+    width: 15%;
+    line-height: 68px;
+}
+.upload-input-container{
+    display:inline-block;
+    width:85%;
+}
+.upload-options{
+    margin-left:10%;
+}

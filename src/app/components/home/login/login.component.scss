@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/theme.scss';
+
+
+.login-section{
+    height:$screen-height;
+    background:$primary-background;
+}
+.login-container{
+    height:$screen-height;
+}
+.login-user{
+    width: 100%;
+    @extend %align-center;
+}
+
+.login-options{
+    width: 28%;
+    height: 38%;
+    background:$secondary-background;
+}
+.login-inner-container{
+    padding: 76px 10px 10px 30px;
+}
+
+.login-input-field{
+    margin: 1.5% 0% 6.5% 0%;
+}
+.login-input{
+    margin-left: 5%;
+    padding: 10px;
+    width: 76%;
+    border-radius: 6px;
+    border: 1px solid $count-color;
+    outline: none;
+    background: $input-background;
+}
+.login-label{
+    font-size: $text-label-font;
+    font-weight: 500;
+    font-family: $primary-font;
+}
+.login-btn{
+    font-size: $text-medium-font;
+    background: $primary-color;
+    height: 45px;
+    width: 125px;
+    font-family: $primary-font;
+    color:$primary-font-color;
+}
+.login-btn-field{
+    float: right;
+    margin-right: 8%;
+    margin-top: 5%;
+}
+.login-label-container{
+    display: inline-block;
+    width: 25%;
+    line-height: 50px;
+}
+.login-input-container{
+    display:inline-block;
+    width:75%;
+}

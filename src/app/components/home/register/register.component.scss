@@ -1,0 +1,70 @@
+@import '../../../../assets/styles/theme.scss';
+
+.register-section{
+    height:$screen-height;
+    background:$primary-background;
+}
+.register-options{
+    width:100%;
+}
+.register-user{
+    width:100%;
+}
+.register-input-field{
+    margin: 1.5% 5% 1.5% 8%;
+}
+.register-input{
+    margin-left: 5%;
+    padding: 10px;
+    width: 70%;
+    border-radius: 6px;
+    border: 1px solid $input-background;
+    outline: none;
+    background: $input-background;
+    &.register-dropdown-input{
+        width:72%;
+    }
+}
+.number-input::-webkit-inner-spin-button, 
+.number-input::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.register-title{
+    margin: 3% 1% 0% 9%;
+    font-size: $text-label-font;
+    font-weight: bold;
+    font-family: $primary-font;
+}
+.register-label{
+    font-size: $text-label-font;
+    font-weight: 500;
+    font-family: $primary-font;
+}
+.register-btn{
+    font-size: $text-medium-font;
+    background: $primary-color;
+    height: 45px;
+    width: 125px;
+    font-family: $primary-font;
+    color:$primary-font-color;
+}
+.register-btn-field{
+    float: right;
+    margin-right: 19%;
+    margin-top: 4%;
+}
+.register-container{
+    height:$screen-height;
+}
+.labels-input-container{
+    display: inline-block;
+    width: 22%;
+    line-height: 48px;
+    margin-top: 60px;
+    margin-left: 7%;
+}
+.values-input-container{
+    display: inline-block;
+    width: 68%;
+}

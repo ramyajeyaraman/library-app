@@ -1,0 +1,55 @@
+
+<div class="content-container">
+    <mat-sidenav-container class="main-container">
+        <mat-sidenav-content>
+            <div class="main-content-container">
+                <div class="action-container">
+                    <div class="buttons-container">
+                        <button mat-fab class="login-btn" *ngIf="!isLoggedInUser()" routerLink="/login">Sign In</button>
+                        <button mat-fab class="register-btn" *ngIf="!isLoggedInUser()" (click)="register()">Register</button>
+                        <button mat-icon-button *ngIf="!isLoggedInUser()" (click)="sidenav.toggle()">
+                            <em class="material-icons search-icon-btn">search</em>
+                        </button>
+                    </div>
+                </div>
+                <div class="info-container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%">
+                    <div fxFlex="20%" class="info-content-container" *ngFor="let genre of genreCount">{{genre.key}}<br>{{genre.value}}</div>
+                </div>
+            </div>
+            <div class="books-container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="3.5%">
+                <div fxFlex="10%" class="featured-title">Featured Books</div>
+                <div fxFlex="10%" class="books-content-container" (click)="displayBookDetails()" *ngFor="let book of featuredBooks">
+                    <div class="book-cover-image" (click)="displayBookDetails(book)"> 
+                        <img class="cover-book-style" src="http://{{book.book_cover_path}}" alt="{{book.book_name}}"/>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav-content>
+        <mat-sidenav class="side-navigation-container" #sidenav mode="over" position="end">
+            <div class="advanced-search-section">
+                <div class="advanced-section-title">Advanced Search</div>
+                <div class="advanced-options">
+                    <div class="search-input-field">
+                        <span class="search-label">By Author: </span>
+                        <span><input class="adv-search-input" type="text" [(ngModel)]="search.authorKeyword"/></span>
+                    </div>
+                    <div class="search-input-field">
+                        <span class="search-label">By Genre: </span>
+                        <span><input class="adv-search-input" type="text" [(ngModel)]="search.genreKeyword"/></span>
+                    </div>
+                    <div class="search-input-field">
+                        <span class="search-label">By Title: </span>
+                        <span><input class="adv-search-input" type="text" [(ngModel)]="search.titleKeyword"/></span>
+                    </div>
+                    <div class="search-input-field">
+                        <span class="search-label">By Content: </span>
+                        <span><input class="adv-search-input" type="text" [(ngModel)]="search.contentKeyword"/></span>
+                    </div>
+                    <div class="search-btn-field">
+                        <button mat-button class="advanced-search" (click)="searchBook()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav>
+    </mat-sidenav-container>
+</div>

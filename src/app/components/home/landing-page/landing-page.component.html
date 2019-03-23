@@ -1,0 +1,98 @@
+<div class="librarian-section" *ngIf="role === 'librarian'">
+    <div class="manage-title manage-librarian" fxLayout="row" fxLayout.xs="row" fxLayoutWrap>
+        <div>Librarian Management</div>
+        <div class="genre-title manage-librarian-genre">Genre Info</div>
+    </div>
+    <div class="reports-admin-section" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%">
+        <div class="management-container-librarian" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="7.5%">
+            <div class="admin-content-container" fxFlex="70%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+                <div class="books-tile"><em class="material-icons books-tile-icon">library_books</em></div>
+                <div class="count-style">{{institutionBooksCount}}</div>
+                <div>Books</div>
+                <button mat-raised-button class="read-btn" (click)="loadBooks(role)">Manage</button>
+            </div>
+            <div class="admin-content-container" fxFlex="70%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+                <div class="students-tile"><em class="material-icons students-tile-icon">group</em></div>
+                <div class="count-style">{{institutionStudentsCount}}</div>
+                <div>Students</div>
+            </div>
+            <div class="admin-content-graph-container" fxFlex="70%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+                <div class="pie-chart-container">
+                    <canvas baseChart
+                        [data]="librarianChartData"
+                        [labels]="librarianChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        (chartHover)="librarianChartHovered($event)"
+                        (chartClick)="librarianChartClicked($event)" *ngIf="isLibrarianChartDataAvailable">
+                    </canvas>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <div class="graph-title">Weekly Info</div>
+    <div class="reports-container">
+        <div class="reports-graph-container bar-chart-container">
+            <canvas baseChart
+                [labels]="barChartLabels"
+                [datasets]="librarianBarChartData"
+                [chartType]="barChartType"
+                [options]="barChartOptions1"
+                (chartHover)="librarianBarChartHovered($event)"
+                (chartClick)="librarianBarChartClicked($event)" *ngIf="isLibrarianBarChartDataAvailable">
+            </canvas>
+        </div>
+    </div>
+</div>
+<div class="admin-section" *ngIf="role === 'admin'">
+    <div class="manage-title" fxLayout="row" fxLayout.xs="row" fxLayoutWrap>
+        <div>Admin Management</div>
+        <div class="genre-title">Genre Info</div>
+    </div>
+    <div class="reports-admin-section" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.5%">
+        <div class="management-container" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="2.5%">
+            <div class="admin-content-container" fxFlex="17%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+              <div class="books-tile"><em class="material-icons books-tile-icon">library_books</em></div>
+              <div class="count-style">{{adminBooksCount}}</div>
+              <div>Books</div>
+              <button mat-raised-button class="read-btn" (click)="loadBooks(role)">Manage</button>
+            </div>
+            <div class="admin-content-container" fxFlex="17%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+              <div class="students-tile"><em class="material-icons students-tile-icon">group</em></div>
+              <div class="count-style">{{adminStudentsCount}}</div>
+              <div>Students</div>
+            </div>
+            <div class="admin-content-container" fxFlex="17%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+                <div class="institutions-tile"><em class="material-icons institutions-tile-icon">domain</em></div>
+                <div class="count-style">{{adminInstitutionsCount}}</div>
+                <div>Institutions</div>
+                <button mat-raised-button class="read-btn" (click)="loadInstitutions(role)">Manage</button>
+            </div>
+            <div class="admin-content-graph-container" fxFlex="49%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+                <div class="pie-chart-container">
+                    <canvas baseChart
+                        [data]="adminChartData"
+                        [labels]="adminChartLabels"
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        (chartHover)="adminChartHovered($event)"
+                        (chartClick)="adminChartClicked($event)" *ngIf="isAdminChartDataAvailable">
+                    </canvas>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <div class="graph-title">Weekly Info</div>
+    <div class="reports-container">
+        <div class="reports-graph-container bar-chart-container">
+            <canvas baseChart
+                [datasets]="adminBarChartData"
+                [chartType]="barChartType"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                (chartHover)="adminBarChartHovered($event)"
+                (chartClick)="adminBarChartClicked($event)" *ngIf="isAdminBarChartDataAvailable">
+            </canvas>
+        </div>
+    </div>
+</div>

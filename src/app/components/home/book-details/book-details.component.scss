@@ -1,0 +1,69 @@
+@import '../../../../assets/styles/theme.scss';
+
+
+.details-container{
+    height:$screen-height;
+}
+.book-image-section{
+    @extend %align-center;
+}
+.book-section{
+    height:59%;
+}
+.book-detail-section{
+    display:flex;
+    align-items:center;
+    font-size:$text-label-font;
+    font-family:$primary-font;
+}
+.book-image{
+    height: 100%;
+    width: 100%;
+}
+.book-image-style{
+       /* width: 50%; */
+    /* height: 85%; */
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    left: 15%;
+    top: 5%;
+    width:60%;
+    height:90%;
+    border:1px solid grey;
+}
+.review-container{
+    height: 35%;
+    padding-left: 6%;
+    padding-right: 2%;
+    width: 92%;
+}
+.review-content{
+    font-size: $text-medium-font;
+    margin-left: 4.5%;
+    margin-bottom: 25px;
+    font-family: $primary-font;
+}
+.review-title{
+    font-size: $text-label-font;
+    margin-bottom: 35px;
+    margin-top: 40px;
+    font-weight:bold;
+}
+.read-btn{
+    background: $primary-color;
+    margin-top: 8%;
+    color:$primary-font-color;
+}
+.videos-container{
+    width:100%;
+    height:200px;
+}
+.videos-content-container{
+    display: inline-block;
+    width: 18%;
+    margin-right: 2%;
+}
+.video-frame{
+    width:100%;
+}

@@ -1,0 +1,86 @@
+<div class="register-section">
+  <div fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="register-container">
+      <div fxFlex="100%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="register-details-section">
+          <div class="register-user">
+              <div class="register-title" *ngIf="flow === 'register-user'">Register User</div>
+              <div class="register-title" *ngIf="flow === 'register-librarian'">Register Librarian</div>
+              <div class="register-options">
+                <div class="labels-input-container">
+                    <div class="register-input-field">
+                        <span class="register-label">Email Id: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">First Name: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Last Name: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Password: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Confirm Password: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Contact Number: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">RECOVERY QUESTION 1: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Recovery Question Answer 1: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">RECOVERY QUESTION 2: </span>
+                    </div>
+                    <div class="register-input-field">
+                        <span class="register-label">Recovery Question Answer 2: </span>
+                    </div>
+                </div>
+                <!-- Input values -->
+                <div class="values-input-container">
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="text" [(ngModel)]="register.email_id"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="text" [(ngModel)]="register.user_fname"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="text" [(ngModel)]="register.user_lname"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="password" [(ngModel)]="register.password"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="password" [(ngModel)]="register.confirmpwd"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input number-input" type="number" [(ngModel)]="register.mobile" /></span>
+                    </div>
+                    <div class="register-input-field">
+                        <select class="register-input register-dropdown-input" [(ngModel)]="register.recovery_question1">
+                        <option class="select-option-style" disabled>CHOOSE RECOVERY QUESTION 1</option>
+                        <option class="select-option-style" *ngFor="let option1 of optionsList1" value="{{option1}}">{{option1}}</option>
+                        </select>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="text" [(ngModel)]="register.recovery_answer1"/></span>
+                    </div>
+                    <div class="register-input-field">
+                        <select class="register-input register-dropdown-input" [(ngModel)]="register.recovery_question2">
+                        <option class="select-option-style" disabled>CHOOSE RECOVERY QUESTION 2</option>
+                        <option class="select-option-style" *ngFor="let option2 of optionsList2" value="{{option2}}">{{option2}}</option>
+                        </select>
+                    </div>
+                    <div class="register-input-field">
+                        <span><input class="register-input" type="text" [(ngModel)]="register.recovery_answer2"/></span>
+                    </div>
+                </div>
+                <div class="register-btn-field">
+                  <button mat-button class="register-btn" (click)="displaySuccessMessage(flow)">Register</button>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

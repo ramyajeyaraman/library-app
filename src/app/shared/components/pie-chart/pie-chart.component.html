@@ -1,0 +1,8 @@
+<canvas baseChart height="100" width="100" 
+  [data]="chartData"
+  [labels]="chartLabels"
+  [chartType]="pieChartType"
+  [options]="pieChartOptions"
+  (chartHover)="chartHovered($event)"
+  (chartClick)="chartClicked($event)" *ngIf="isChartDataAvailable">
+</canvas>

@@ -1,0 +1,46 @@
+@import '../../../../assets/styles/theme.scss';
+
+.upload-input-field{
+    margin: 5% 10% 5% 0;
+}
+.upload-input{
+    margin-left: 5%;
+    padding: 10px;
+    width:80%;
+    border-radius: 6px;
+    border: 1px solid $input-background;
+    outline: none;
+    background:$input-background;
+}
+.upload-label{
+    font-size: $text-medium-font;
+    font-weight: 500;
+    font-family: $primary-font;
+}
+.edit-header{
+    margin-left: 10%;
+    font-size: $text-label-font;
+}
+.edit-btn-container{
+    float: right;
+    margin-right: 20%;
+}
+.edit-btn{
+    background:$primary-color;
+    color:$primary-font-color;
+}
+.upload-label-container{
+    display: inline-block;
+    width: 10%;
+    line-height: 66px;
+    &.upload-edit-label-container{
+        line-height:68px;
+    }
+}
+.upload-input-container{
+    display:inline-block;
+    width:85%;
+}
+.upload-options{
+    margin-left:10%;
+}

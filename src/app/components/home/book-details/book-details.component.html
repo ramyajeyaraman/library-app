@@ -1,0 +1,31 @@
+<div class="details-container">
+  <div class="book-section" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%">
+      <div fxFlex="40%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="book-image-section">
+        <div class="book-image">
+          <img src="http://{{bookDetails.book_cover_path}}" alt="{{bookDetails.title}}" class="book-image-style"/>
+        </div>
+      </div>
+      <div fxFlex="60%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="book-detail-section">
+          <div fxFlex="70%" fxLayout="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2.5%">
+              <div class="book-detail-style">{{bookDetails.book_name}}</div>
+              <div class="book-detail-style">By: {{bookDetails.author}}</div>
+              <div class="book-detail-style">Genre: {{bookDetails.book_genre}}</div>
+              <div class="book-detail-style">Contributed By: {{bookDetails.institution_name}}</div>
+              <div class="book-detail-style">Edition: {{bookDetails.edition}}</div>
+              <div class="book-detail-style">
+                <button mat-raised-button class="read-btn" *ngIf="isLoggedInUser()" (click)="readBook()">Read</button>
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="review-container">
+    <div class="review-title">Related Videos</div>
+    <div class="videos-container">
+      <div class="videos-content-container" *ngFor="let video of videosList">
+          <div class="videos-section"> 
+            <iframe class="video-frame" [src]="video | safe"></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

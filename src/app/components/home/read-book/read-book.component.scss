@@ -1,0 +1,139 @@
+@import '../../../../assets/styles/theme.scss';
+
+.book-title-style{
+    font-size: $text-label-font;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    margin-left: 10%;
+    font-family: $primary-font;
+}
+main {
+    background:  $primary-background url("/assets/background.png") no-repeat;
+    background-size: cover  ;
+    width: 100%;
+    height: 100%;
+    @extend %align-center;
+    margin-top:3%;
+  }
+  #content {
+    width: 80vw;
+    height: calc(100vh - 195px);
+    display: flex;
+    flex-flow: row;
+  }
+  #menu {
+    width: 70px;
+    height: 100%;
+    background: $primary-color;
+  }
+  .menuItem {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    flex-flow: column;
+    @extend %align-center;
+    color: #8893a6;
+    cursor: pointer;
+  }
+  .menuItem .icon {
+    font-size: $heading-font;
+  }
+  .menuItem .title {
+    font-size: $small-font;
+  } 
+  .menuItem.active, .menuItem.active:hover, .subMenu .subMenuItem:hover {
+    border-color: $primary-font-color;
+    color: $primary-font-color;
+  }
+  .menuItem:hover {
+    color: $primary-font-color;
+  }
+  
+  #viewer {
+    height: 100%;
+    width: calc(80vw - 70px - 400px);
+    background: $primary-color;
+    padding: 0 20px;
+  }
+  .infoBox {
+    line-height: 80vh;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #toolbar {
+    width: 400px;
+    height: calc(100% - 40px);
+    background: $primary-background;
+    padding: 20px;
+    font-size: $small-font;
+    font-weight: bold;
+    color: #8893a6;
+    overflow-y: auto;
+  }
+  
+  .subMenu .subMenuItemGroup {
+    display: flex;
+  }
+  .subMenu .subMenuItemGroup .subMenuItem, .subMenu .subMenuItemGroup input {
+    margin: 10px 10px 0 0;
+  }
+  .subMenu .subMenuItem, .subMenu input {
+    border: 2px solid #8893a6;
+    border-radius: 5px;
+    padding: 4px 6px;
+    margin: 10px 0 0 0;
+    width: fit-content;
+    font-size: $small-font;
+    font-weight: bold;
+    color: #8893a6;
+  }
+  .subMenu .subMenuItem {
+    cursor: pointer;
+  }
+  
+  .outline {
+    margin: 0;
+    padding: 0;
+  }
+  .outline h2 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: $text-medium-font;
+    color:  $primary-icon-color;
+  }
+  .outline ul {
+    margin: 0;
+    padding: 5px 1vw;
+  }
+  .outline li {
+    font-size: $small-font;
+  }
+  .outline .outline-main-item {
+    font-weight: bold;
+    color:  $primary-icon-color;
+  }
+  .outline a {
+    font-size: $small-font;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .outline a:hover {
+    color: #346680;
+  }
+  
+  .snapshot {
+    width: 30%;
+    margin: 2px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+  }
+  .snapshotsContainer {
+    margin: 15px 0;
+  }
+  .snapshotBig {
+    max-width: calc(100vw - 100px);
+    max-height: calc(100vh - 100px);
+  }

@@ -1,0 +1,76 @@
+<div class="dialog-style">
+    <div mat-dialog-title class="edit-header" *ngIf="flow === 'edit'">Edit Book</div>
+    <div mat-dialog-title class="edit-header" *ngIf="flow !== 'edit'">Search By</div>
+    <mat-dialog-content>
+        <div class="edit-book-details" *ngIf="flow === 'edit'">
+            <div class="upload-options">
+                <div class="upload-label-container upload-edit-label-container">
+                    <div class="upload-input-field">
+                        <span class="upload-label">Name: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Author: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">ISBN: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Genre: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Edition: </span>
+                    </div>
+                </div>
+                <!--Input-->
+                <div class="upload-input-container">
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" value="{{bookData.book_name}}" [(ngModel)]="bookData.book_name"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" value="{{bookData.author}}" [(ngModel)]="bookData.author"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" value="{{bookData.book_isbn}}" [(ngModel)]="bookData.book_isbn"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" value="{{bookData.book_genre}}" [(ngModel)]="bookData.book_genre"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" value="{{bookData.edition}}" [(ngModel)]="bookData.edition"/></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="edit-book-details" *ngIf="flow !== 'edit'">
+            <div class="upload-options">
+                <div class="upload-label-container">
+                    <div class="upload-input-field">
+                        <span class="upload-label">Name: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Author: </span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Genre: </span>
+                    </div>
+                </div>
+                <div class="upload-input-container">
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" [(ngModel)]="searchVal.titleKeyword"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" [(ngModel)]="searchVal.authorKeyword"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span><input class="upload-input" type="text" [(ngModel)]="searchVal.genreKeyword"/></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="edit-btn-container">
+        <button class="mat-raised-button"(click)="cancel()">Cancel</button>
+        <button class="mat-raised-button edit-btn"(click)="save()" *ngIf="flow === 'edit'">Save</button>
+        <button class="mat-raised-button edit-btn"(click)="search()" *ngIf="flow !== 'edit'">Search</button>
+    </mat-dialog-actions>
+</div>

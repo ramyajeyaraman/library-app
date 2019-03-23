@@ -1,0 +1,55 @@
+@import '../../../../assets/styles/theme.scss';
+
+
+.institutions-container{
+    height:$screen-height;
+    background:$primary-background;
+}
+.institution-header-title{
+    font-size: $heading-font;
+    left: 10%;
+    top: 34%;
+    position: relative;
+    width: 28%;
+    float: left;
+}
+.institutions-content{
+    height:600px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.admin-container{
+    height:235px;
+}
+.list-header{
+    height:70px !important;
+}
+.card-action-content{
+    float:right;
+}
+.action-list-btn{
+    margin-right:35px;
+}
+.mat-expansion-panel{
+    margin-bottom: 3%;
+}
+.mat-expansion-panel-header{
+    font-size:$text-label-font !important;
+}
+.mat-expansion-panel-header:hover{
+    background:none;
+}
+.info-style{
+    font-size: $text-label-font;
+    margin-bottom: 15px;
+}
+.register-institution-btn{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    background: $primary-color;
+    color:$primary-font-color;
+}
+.institution-btn{
+    background:$primary-color;
+}

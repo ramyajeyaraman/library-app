@@ -1,0 +1,24 @@
+<div class="institutions-container">
+  <div class="admin-container">
+    <div class="institution-header-title">Registered Institutions</div>
+    <button mat-raised-button class="register-institution-btn" (click)="registerInstitution()">Register Institution</button>
+  </div>
+  <div class="institutions-content">
+    <mat-accordion *ngFor="let institution of institutionsList">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+          <mat-panel-title>{{institution.institution_name}}</mat-panel-title>
+            <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="info-style">Address: {{institution.institution_address}}</div>
+          <div class="info-style">Email Id: {{institution.institution_email_id}}</div>
+          <div class="info-style">Contact: {{institution.institution_contact}}</div>
+          <div class="info-style">Created Date: {{getCreatedDate(institution.created_date)}}</div>
+          <div class="card-action-content">
+            <button mat-raised-button class="action-list-btn institution-btn" (click)="deactivate(institution)">Deactivate</button>
+            <button mat-raised-button class="institution-btn"  (click)="registerLibrarian()">Register Librarian</button>
+          </div>
+        </mat-expansion-panel>
+    </mat-accordion>  
+  </div>    
+</div>

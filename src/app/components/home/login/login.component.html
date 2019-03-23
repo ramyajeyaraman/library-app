@@ -1,0 +1,31 @@
+<div class="login-section">
+    <div fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="login-container">
+        <div fxFlex="100%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="login-details-section">
+            <div class="login-user">
+                <div class="login-options">
+                    <div class="login-inner-container">
+                        <div class="login-label-container">
+                            <div class="login-input-field">
+                                <span class="login-label">Username: </span>
+                            </div>
+                            <div class="login-input-field">
+                                <span class="login-label">Password: </span>
+                            </div>
+                        </div>
+                        <div class="login-input-container">
+                            <div class="login-input-field">
+                                <span><input class="login-input" type="text" [(ngModel)]="loginVal.username"/></span>
+                            </div>
+                            <div class="login-input-field">
+                                <span><input class="login-input" type="password" [(ngModel)]="loginVal.password"/></span>
+                            </div>
+                        </div>
+                        <div class="login-btn-field">
+                            <button mat-button class="login-btn" (click)="login()">Login</button>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>  

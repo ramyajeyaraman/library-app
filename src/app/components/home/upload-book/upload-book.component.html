@@ -1,0 +1,84 @@
+<div class="upload-section" *ngIf="flow === 'admin-manage-books' || flow === 'librarian-manage-books'">
+    <div fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%">
+        <div fxFlex="70%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="upload-details-section">
+            <div class="book-details-upload">
+                <div class="upload-book-title upload-flow-title">Upload Book</div>
+                <div class="upload-options">
+                    <div class="upload-input-field">
+                        <span class="upload-label">Name: </span>
+                        <span><input class="upload-input" type="text" [(ngModel)]="newBook.book_name"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">ISBN: </span>
+                        <span><input class="upload-input" type="text" [(ngModel)]="newBook.book_isbn"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Genre: </span>
+                        <span><input class="upload-input" type="text" [(ngModel)]="newBook.book_genre"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Author: </span>
+                        <span><input class="upload-input" type="text" [(ngModel)]="newBook.author"/></span>
+                    </div>
+                    <div class="upload-input-field">
+                        <span class="upload-label">Edition: </span>
+                        <span><input class="upload-input" type="text" [(ngModel)]="newBook.edition"/></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="30%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="upload-container">
+            <div class="upload-background">
+                <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
+            </div>
+        </div>
+    </div>
+    <div class="upload-btn-field">
+        <button mat-button class="upload-btn" (click)="displayHomePage(flow)">Upload</button>
+    </div>
+</div>
+<div class="upload-section institute-container" *ngIf="flow === 'register-institution'">
+    <div fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%">
+        <div fxFlex="90%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="upload-details-section">
+            <div class="book-details-upload">
+                <div class="upload-book-title">Register Institution</div>
+                <div class="upload-options">
+                    <div class="upload-label-container">
+                        <div class="upload-input-field">
+                            <span class="upload-label">Name: </span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span class="upload-label">Address: </span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span class="upload-label">Email Id: </span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span class="upload-label">Contact: </span>
+                        </div>
+                    </div>
+                    <!--Input -->
+                    <div class="upload-input-container">
+                        <div class="upload-input-field">
+                            <span><input class="upload-input" type="text" [(ngModel)]="register.institution_name"/></span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span><input class="upload-input" type="text" [(ngModel)]="register.institution_address"/></span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span><input class="upload-input" type="text" [(ngModel)]="register.institution_email_id"/></span>
+                        </div>
+                        <div class="upload-input-field">
+                            <span><input class="upload-input" type="text" [(ngModel)]="register.institution_contact"/></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="10%" fxLayout="row" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="1.5%" class="upload-container">
+        </div>
+    </div>
+    <div class="upload-btn-field  register-btn">
+        <button mat-button class="upload-btn" (click)="displayHomePage(flow)">Register</button>
+    </div>
+</div>
